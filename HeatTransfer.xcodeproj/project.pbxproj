@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59ABC9D9259B8BF800EE9F4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC9D8259B8BF800EE9F4C /* AppDelegate.m */; };
+		59ABC9DC259B8BF800EE9F4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC9DB259B8BF800EE9F4C /* ViewController.m */; };
+		59ABC9DE259B8BF800EE9F4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59ABC9DD259B8BF800EE9F4C /* Assets.xcassets */; };
+		59ABC9E1259B8BF900EE9F4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59ABC9DF259B8BF900EE9F4C /* Main.storyboard */; };
+		59ABC9E4259B8BF900EE9F4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC9E3259B8BF900EE9F4C /* main.m */; };
+		59ABC9F0259B8D6E00EE9F4C /* HeatTransferView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC9EE259B8D6E00EE9F4C /* HeatTransferView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		59ABC9D4259B8BF800EE9F4C /* HeatTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeatTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59ABC9D7259B8BF800EE9F4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		59ABC9D8259B8BF800EE9F4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		59ABC9DA259B8BF800EE9F4C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		59ABC9DB259B8BF800EE9F4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		59ABC9DD259B8BF800EE9F4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59ABC9E0259B8BF900EE9F4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59ABC9E2259B8BF900EE9F4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59ABC9E3259B8BF900EE9F4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		59ABC9E5259B8BF900EE9F4C /* HeatTransfer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeatTransfer.entitlements; sourceTree = "<group>"; };
+		59ABC9EE259B8D6E00EE9F4C /* HeatTransferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeatTransferView.m; sourceTree = "<group>"; };
+		59ABC9EF259B8D6E00EE9F4C /* HeatTransferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeatTransferView.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59ABC9D1259B8BF800EE9F4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59ABC9CB259B8BF800EE9F4C = {
+			isa = PBXGroup;
+			children = (
+				59ABC9D6259B8BF800EE9F4C /* HeatTransfer */,
+				59ABC9D5259B8BF800EE9F4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59ABC9D5259B8BF800EE9F4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59ABC9D4259B8BF800EE9F4C /* HeatTransfer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59ABC9D6259B8BF800EE9F4C /* HeatTransfer */ = {
+			isa = PBXGroup;
+			children = (
+				59ABC9EF259B8D6E00EE9F4C /* HeatTransferView.h */,
+				59ABC9EE259B8D6E00EE9F4C /* HeatTransferView.m */,
+				59ABC9D7259B8BF800EE9F4C /* AppDelegate.h */,
+				59ABC9D8259B8BF800EE9F4C /* AppDelegate.m */,
+				59ABC9DA259B8BF800EE9F4C /* ViewController.h */,
+				59ABC9DB259B8BF800EE9F4C /* ViewController.m */,
+				59ABC9DD259B8BF800EE9F4C /* Assets.xcassets */,
+				59ABC9DF259B8BF900EE9F4C /* Main.storyboard */,
+				59ABC9E2259B8BF900EE9F4C /* Info.plist */,
+				59ABC9E3259B8BF900EE9F4C /* main.m */,
+				59ABC9E5259B8BF900EE9F4C /* HeatTransfer.entitlements */,
+			);
+			path = HeatTransfer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59ABC9D3259B8BF800EE9F4C /* HeatTransfer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59ABC9E8259B8BF900EE9F4C /* Build configuration list for PBXNativeTarget "HeatTransfer" */;
+			buildPhases = (
+				59ABC9D0259B8BF800EE9F4C /* Sources */,
+				59ABC9D1259B8BF800EE9F4C /* Frameworks */,
+				59ABC9D2259B8BF800EE9F4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeatTransfer;
+			productName = HeatTransfer;
+			productReference = 59ABC9D4259B8BF800EE9F4C /* HeatTransfer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59ABC9CC259B8BF800EE9F4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					59ABC9D3259B8BF800EE9F4C = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 59ABC9CF259B8BF800EE9F4C /* Build configuration list for PBXProject "HeatTransfer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59ABC9CB259B8BF800EE9F4C;
+			productRefGroup = 59ABC9D5259B8BF800EE9F4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59ABC9D3259B8BF800EE9F4C /* HeatTransfer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59ABC9D2259B8BF800EE9F4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59ABC9DE259B8BF800EE9F4C /* Assets.xcassets in Resources */,
+				59ABC9E1259B8BF900EE9F4C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59ABC9D0259B8BF800EE9F4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59ABC9DC259B8BF800EE9F4C /* ViewController.m in Sources */,
+				59ABC9E4259B8BF900EE9F4C /* main.m in Sources */,
+				59ABC9D9259B8BF800EE9F4C /* AppDelegate.m in Sources */,
+				59ABC9F0259B8D6E00EE9F4C /* HeatTransferView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		59ABC9DF259B8BF900EE9F4C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59ABC9E0259B8BF900EE9F4C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59ABC9E6259B8BF900EE9F4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		59ABC9E7259B8BF900EE9F4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		59ABC9E9259B8BF900EE9F4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HeatTransfer/HeatTransfer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HeatTransfer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = eloibarti.com.HeatTransfer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		59ABC9EA259B8BF900EE9F4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HeatTransfer/HeatTransfer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HeatTransfer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = eloibarti.com.HeatTransfer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59ABC9CF259B8BF800EE9F4C /* Build configuration list for PBXProject "HeatTransfer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59ABC9E6259B8BF900EE9F4C /* Debug */,
+				59ABC9E7259B8BF900EE9F4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59ABC9E8259B8BF900EE9F4C /* Build configuration list for PBXNativeTarget "HeatTransfer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59ABC9E9259B8BF900EE9F4C /* Debug */,
+				59ABC9EA259B8BF900EE9F4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59ABC9CC259B8BF800EE9F4C /* Project object */;
+}
