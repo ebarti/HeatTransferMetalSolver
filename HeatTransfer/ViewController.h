@@ -5,9 +5,11 @@
 //  Created by Eloi on 12/29/20.
 //
 
-#import <Cocoa/Cocoa.h>
+@import AppKit;
+@import MetalKit;
+#import "HeatTransferView.h"
 
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController <HeatTransferViewDelegate>
 
 
 @end

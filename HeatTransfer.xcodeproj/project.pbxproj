@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59979296259CE172009F6FA6 /* HeatTransferRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 59979295259CE172009F6FA6 /* HeatTransferRenderer.m */; };
 		59ABC9D9259B8BF800EE9F4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC9D8259B8BF800EE9F4C /* AppDelegate.m */; };
 		59ABC9DC259B8BF800EE9F4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC9DB259B8BF800EE9F4C /* ViewController.m */; };
 		59ABC9DE259B8BF800EE9F4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59ABC9DD259B8BF800EE9F4C /* Assets.xcassets */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59979294259CE172009F6FA6 /* HeatTransferRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeatTransferRenderer.h; sourceTree = "<group>"; };
+		59979295259CE172009F6FA6 /* HeatTransferRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeatTransferRenderer.m; sourceTree = "<group>"; };
 		59ABC9D4259B8BF800EE9F4C /* HeatTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeatTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59ABC9D7259B8BF800EE9F4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59ABC9D8259B8BF800EE9F4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -41,9 +44,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5997928D259CE04F009F6FA6 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				59979294259CE172009F6FA6 /* HeatTransferRenderer.h */,
+				59979295259CE172009F6FA6 /* HeatTransferRenderer.m */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
 		59ABC9CB259B8BF800EE9F4C = {
 			isa = PBXGroup;
 			children = (
+				5997928D259CE04F009F6FA6 /* Renderer */,
 				59ABC9D6259B8BF800EE9F4C /* HeatTransfer */,
 				59ABC9D5259B8BF800EE9F4C /* Products */,
 			);
@@ -146,6 +159,7 @@
 				59ABC9DC259B8BF800EE9F4C /* ViewController.m in Sources */,
 				59ABC9E4259B8BF900EE9F4C /* main.m in Sources */,
 				59ABC9D9259B8BF800EE9F4C /* AppDelegate.m in Sources */,
+				59979296259CE172009F6FA6 /* HeatTransferRenderer.m in Sources */,
 				59ABC9F0259B8D6E00EE9F4C /* HeatTransferView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
