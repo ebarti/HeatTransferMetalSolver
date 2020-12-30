@@ -8,10 +8,11 @@
 #import <QuartzCore/CAMetalLayer.h>
 #import <Metal/Metal.h>
 
+
 @import AppKit;
 
 //************************************************************************
-// Protocol to provide resize and redraw callbacks to a delegate
+// Protocol to provide resize and redraw callbacks to the Heat Transfer Renderer
 //************************************************************************
 @protocol HeatTransferViewDelegate <NSObject>
 

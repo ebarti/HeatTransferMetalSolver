@@ -18,32 +18,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Do any additional setup after loading the view.
-}
+    // Create device
+    id<MTLDevice> device = MTLCreateSystemDefaultDevice();
 
+    // Set the view
+    HeatTransferView *view = (HeatTransferView *)self.view;
 
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
+    view.metalLayer.device = device;
 
-    // Update the view, if already loaded.
+    // This is the key piece here....
+    view.delegate = self;
+
+    _renderer = [[HeatTransferRenderer alloc] initWithMetalDevice:device];
 }
 
 
 - (void)drawableResize:(CGSize)size {
-    <#code#>
+    [_renderer drawableResize:size];
 }
 
 - (void)renderToMetalLayer:(nonnull CAMetalLayer *)metalLayer {
-    <#code#>
+    [_renderer renderToMetalLayer:metalLayer];
 }
 
-- (BOOL)commitEditingAndReturnError:(NSError *__autoreleasing  _Nullable * _Nullable)error {
-    <#code#>
-}
-
-- (void)encodeWithCoder:(nonnull NSCoder *)coder {
-    <#code#>
-}
 
 @end

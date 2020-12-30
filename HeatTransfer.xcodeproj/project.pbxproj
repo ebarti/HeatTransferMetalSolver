@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		59979296259CE172009F6FA6 /* HeatTransferRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 59979295259CE172009F6FA6 /* HeatTransferRenderer.m */; };
+		59979299259CEBC2009F6FA6 /* HeatTransferShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 59979298259CEBC2009F6FA6 /* HeatTransferShaders.metal */; };
 		59ABC9D9259B8BF800EE9F4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC9D8259B8BF800EE9F4C /* AppDelegate.m */; };
 		59ABC9DC259B8BF800EE9F4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC9DB259B8BF800EE9F4C /* ViewController.m */; };
 		59ABC9DE259B8BF800EE9F4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59ABC9DD259B8BF800EE9F4C /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		59979294259CE172009F6FA6 /* HeatTransferRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeatTransferRenderer.h; sourceTree = "<group>"; };
 		59979295259CE172009F6FA6 /* HeatTransferRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeatTransferRenderer.m; sourceTree = "<group>"; };
+		59979298259CEBC2009F6FA6 /* HeatTransferShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = HeatTransferShaders.metal; sourceTree = "<group>"; };
+		5997929B259CEBE7009F6FA6 /* HeatTransferShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeatTransferShaderTypes.h; sourceTree = "<group>"; };
 		59ABC9D4259B8BF800EE9F4C /* HeatTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeatTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59ABC9D7259B8BF800EE9F4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59ABC9D8259B8BF800EE9F4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,6 +52,8 @@
 			children = (
 				59979294259CE172009F6FA6 /* HeatTransferRenderer.h */,
 				59979295259CE172009F6FA6 /* HeatTransferRenderer.m */,
+				59979298259CEBC2009F6FA6 /* HeatTransferShaders.metal */,
+				5997929B259CEBE7009F6FA6 /* HeatTransferShaderTypes.h */,
 			);
 			path = Renderer;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				59ABC9D9259B8BF800EE9F4C /* AppDelegate.m in Sources */,
 				59979296259CE172009F6FA6 /* HeatTransferRenderer.m in Sources */,
 				59ABC9F0259B8D6E00EE9F4C /* HeatTransferView.m in Sources */,
+				59979299259CEBC2009F6FA6 /* HeatTransferShaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
