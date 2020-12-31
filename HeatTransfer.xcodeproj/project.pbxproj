@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		59979294259CE172009F6FA6 /* HeatTransferRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeatTransferRenderer.h; sourceTree = "<group>"; };
 		59979295259CE172009F6FA6 /* HeatTransferRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeatTransferRenderer.m; sourceTree = "<group>"; };
-		59979298259CEBC2009F6FA6 /* HeatTransferShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = HeatTransferShaders.metal; sourceTree = "<group>"; };
+		59979298259CEBC2009F6FA6 /* HeatTransferShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = HeatTransferShaders.metal; sourceTree = "<group>"; };
 		5997929B259CEBE7009F6FA6 /* HeatTransferShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeatTransferShaderTypes.h; sourceTree = "<group>"; };
 		59ABC9D4259B8BF800EE9F4C /* HeatTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeatTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59ABC9D7259B8BF800EE9F4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,9 +31,10 @@
 		59ABC9E0259B8BF900EE9F4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59ABC9E2259B8BF900EE9F4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59ABC9E3259B8BF900EE9F4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		59ABC9E5259B8BF900EE9F4C /* HeatTransfer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeatTransfer.entitlements; sourceTree = "<group>"; };
 		59ABC9EE259B8D6E00EE9F4C /* HeatTransferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeatTransferView.m; sourceTree = "<group>"; };
 		59ABC9EF259B8D6E00EE9F4C /* HeatTransferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeatTransferView.h; sourceTree = "<group>"; };
+		59B19EBD259E2A8100CF590F /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		59B19EC2259E2B5600CF590F /* DebugConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugConfig.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +51,10 @@
 		5997928D259CE04F009F6FA6 /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
+				5997929B259CEBE7009F6FA6 /* HeatTransferShaderTypes.h */,
 				59979294259CE172009F6FA6 /* HeatTransferRenderer.h */,
 				59979295259CE172009F6FA6 /* HeatTransferRenderer.m */,
 				59979298259CEBC2009F6FA6 /* HeatTransferShaders.metal */,
-				5997929B259CEBE7009F6FA6 /* HeatTransferShaderTypes.h */,
 			);
 			path = Renderer;
 			sourceTree = "<group>";
@@ -61,9 +62,11 @@
 		59ABC9CB259B8BF800EE9F4C = {
 			isa = PBXGroup;
 			children = (
+				59B19EC2259E2B5600CF590F /* DebugConfig.xcconfig */,
 				5997928D259CE04F009F6FA6 /* Renderer */,
 				59ABC9D6259B8BF800EE9F4C /* HeatTransfer */,
 				59ABC9D5259B8BF800EE9F4C /* Products */,
+				59B19EBC259E2A8100CF590F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,9 +91,16 @@
 				59ABC9DF259B8BF900EE9F4C /* Main.storyboard */,
 				59ABC9E2259B8BF900EE9F4C /* Info.plist */,
 				59ABC9E3259B8BF900EE9F4C /* main.m */,
-				59ABC9E5259B8BF900EE9F4C /* HeatTransfer.entitlements */,
 			);
 			path = HeatTransfer;
+			sourceTree = "<group>";
+		};
+		59B19EBC259E2A8100CF590F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59B19EBD259E2A8100CF590F /* Metal.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +137,7 @@
 				};
 			};
 			buildConfigurationList = 59ABC9CF259B8BF800EE9F4C /* Build configuration list for PBXProject "HeatTransfer" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -161,12 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59979299259CEBC2009F6FA6 /* HeatTransferShaders.metal in Sources */,
 				59ABC9DC259B8BF800EE9F4C /* ViewController.m in Sources */,
 				59ABC9E4259B8BF900EE9F4C /* main.m in Sources */,
 				59ABC9D9259B8BF800EE9F4C /* AppDelegate.m in Sources */,
 				59979296259CE172009F6FA6 /* HeatTransferRenderer.m in Sources */,
 				59ABC9F0259B8D6E00EE9F4C /* HeatTransferView.m in Sources */,
-				59979299259CEBC2009F6FA6 /* HeatTransferShaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +245,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -288,7 +297,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -297,10 +305,11 @@
 		};
 		59ABC9E9259B8BF900EE9F4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59B19EC2259E2B5600CF590F /* DebugConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HeatTransfer/HeatTransfer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = HeatTransfer/Info.plist;
@@ -308,6 +317,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = eloibarti.com.HeatTransfer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -318,7 +328,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HeatTransfer/HeatTransfer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = HeatTransfer/Info.plist;
@@ -326,6 +336,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = eloibarti.com.HeatTransfer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -341,7 +352,7 @@
 				59ABC9E7259B8BF900EE9F4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		59ABC9E8259B8BF900EE9F4C /* Build configuration list for PBXNativeTarget "HeatTransfer" */ = {
 			isa = XCConfigurationList;
@@ -350,7 +361,7 @@
 				59ABC9EA259B8BF900EE9F4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

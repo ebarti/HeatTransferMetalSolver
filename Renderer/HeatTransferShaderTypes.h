@@ -9,5 +9,4 @@
 #define HeatTransferShaderTypes_h
 #include <simd/simd.h>
 
-
 #endif /* HeatTransferShaderTypes_h */

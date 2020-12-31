@@ -6,8 +6,8 @@
 //
 
 
-#import "HeatTransferShaders.metal"
 #import "HeatTransferRenderer.h"
+#import "HeatTransferShaderTypes.h"
 
 @implementation HeatTransferRenderer {
     // renderer global ivars

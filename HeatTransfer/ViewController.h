@@ -6,7 +6,6 @@
 //
 
 @import AppKit;
-@import MetalKit;
 #import "HeatTransferView.h"
 
 @interface ViewController : NSViewController <HeatTransferViewDelegate>
