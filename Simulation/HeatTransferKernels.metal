@@ -18,8 +18,8 @@ kernel void SimulateHeatTransfer(device float4*              newTemperature     
                                  device float4*              oldHeatFlow        [[ buffer(EBComputeBufferIndexOldHeatFlow)    ]],
                                  constant EBPhysicalParams & params             [[ buffer(EBComputeBufferIndexPhysicalParams) ]],
                                  threadgroup float4        * sharedPosition     [[ threadgroup(0)                             ]],
-                                 const uint                threadInGrid         [[ thread_position_in_grid                    ]],
-                                 const uint                threadInGroup        [[ thread_position_in_threadgroup             ]],
-                                 const uint                numThreadsInGroup    [[ threads_per_threadgroup                    ]]) {
+                                 const uint                  threadInGrid       [[ thread_position_in_grid                    ]],
+                                 const uint                  threadInGroup      [[ thread_position_in_threadgroup             ]],
+                                 const uint                  numThreadsInGroup  [[ threads_per_threadgroup                    ]]) {
     
 }
