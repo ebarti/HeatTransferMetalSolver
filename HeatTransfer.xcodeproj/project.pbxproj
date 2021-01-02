@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59507CF325A0E92400B50E6A /* HeatTransferSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59507CF225A0E92400B50E6A /* HeatTransferSimulation.m */; };
+		59507CF625A0F64500B50E6A /* HeatTransferKernels.metal in Sources */ = {isa = PBXBuildFile; fileRef = 59507CF525A0F64500B50E6A /* HeatTransferKernels.metal */; };
 		59979296259CE172009F6FA6 /* HeatTransferRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 59979295259CE172009F6FA6 /* HeatTransferRenderer.m */; };
 		59979299259CEBC2009F6FA6 /* HeatTransferShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 59979298259CEBC2009F6FA6 /* HeatTransferShaders.metal */; };
 		59ABC9D9259B8BF800EE9F4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC9D8259B8BF800EE9F4C /* AppDelegate.m */; };
@@ -18,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59507CED25A0E60100B50E6A /* HeatTransferKernelTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeatTransferKernelTypes.h; sourceTree = "<group>"; };
+		59507CF125A0E92400B50E6A /* HeatTransferSimulation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeatTransferSimulation.h; sourceTree = "<group>"; };
+		59507CF225A0E92400B50E6A /* HeatTransferSimulation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeatTransferSimulation.m; sourceTree = "<group>"; };
+		59507CF525A0F64500B50E6A /* HeatTransferKernels.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = HeatTransferKernels.metal; sourceTree = "<group>"; };
 		59979294259CE172009F6FA6 /* HeatTransferRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeatTransferRenderer.h; sourceTree = "<group>"; };
 		59979295259CE172009F6FA6 /* HeatTransferRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeatTransferRenderer.m; sourceTree = "<group>"; };
 		59979298259CEBC2009F6FA6 /* HeatTransferShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = HeatTransferShaders.metal; sourceTree = "<group>"; };
@@ -48,6 +54,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59507CEB25A0E5EC00B50E6A /* Simulation */ = {
+			isa = PBXGroup;
+			children = (
+				59507CED25A0E60100B50E6A /* HeatTransferKernelTypes.h */,
+				59507CF125A0E92400B50E6A /* HeatTransferSimulation.h */,
+				59507CF225A0E92400B50E6A /* HeatTransferSimulation.m */,
+				59507CF525A0F64500B50E6A /* HeatTransferKernels.metal */,
+			);
+			path = Simulation;
+			sourceTree = "<group>";
+		};
+		59507CEF25A0E6F500B50E6A /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				59B19EC2259E2B5600CF590F /* DebugConfig.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 		5997928D259CE04F009F6FA6 /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +87,8 @@
 		59ABC9CB259B8BF800EE9F4C = {
 			isa = PBXGroup;
 			children = (
-				59B19EC2259E2B5600CF590F /* DebugConfig.xcconfig */,
+				59507CEF25A0E6F500B50E6A /* Configs */,
+				59507CEB25A0E5EC00B50E6A /* Simulation */,
 				5997928D259CE04F009F6FA6 /* Renderer */,
 				59ABC9D6259B8BF800EE9F4C /* HeatTransfer */,
 				59ABC9D5259B8BF800EE9F4C /* Products */,
@@ -171,10 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59507CF325A0E92400B50E6A /* HeatTransferSimulation.m in Sources */,
 				59979299259CEBC2009F6FA6 /* HeatTransferShaders.metal in Sources */,
 				59ABC9DC259B8BF800EE9F4C /* ViewController.m in Sources */,
 				59ABC9E4259B8BF900EE9F4C /* main.m in Sources */,
 				59ABC9D9259B8BF800EE9F4C /* AppDelegate.m in Sources */,
+				59507CF625A0F64500B50E6A /* HeatTransferKernels.metal in Sources */,
 				59979296259CE172009F6FA6 /* HeatTransferRenderer.m in Sources */,
 				59ABC9F0259B8D6E00EE9F4C /* HeatTransferView.m in Sources */,
 			);
