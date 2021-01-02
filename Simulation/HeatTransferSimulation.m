@@ -13,7 +13,8 @@ static const NSUInteger CountUpdateBuffersStored = 3;
 @implementation HeatTransferSimulation {
     id<MTLDevice> _device;
     id<MTLCommandQueue> _commandQueue;
-    id<MTLComputePipelineState> _computePipeline;
+    id<MTLComputePipelineState> _computeQnPipeline;
+    id<MTLComputePipelineState> _computeTn1Pipeline;
     id<MTLBuffer> _updateBuffer[CountUpdateBuffersStored];
 
     NSData *_updateData[CountUpdateBuffersStored];
@@ -57,8 +58,13 @@ static const NSUInteger CountUpdateBuffersStored = 3;
     return self;
 }
 
-- (nonnull id<MTLBuffer>)simulateFrameWithCommandBuffer:(nonnull id<MTLCommandBuffer>)commandBuffer { 
+- (nonnull id<MTLBuffer>)computeQnWithCommandBuffer:(nonnull id<MTLCommandBuffer>)commandBuffer {
     <#code#>;
+}
+
+
+- (nonnull id<MTLBuffer>)computeTn1WithCommandBuffer:(nonnull id<MTLCommandBuffer>)commandBuffer {
+    ;
 }
 
 - (void)createMetalObjectsAndMemory {
@@ -68,12 +74,18 @@ static const NSUInteger CountUpdateBuffersStored = 3;
     // Load all the shader files with a .metal file extension in the project
     id<MTLLibrary> defaultLibrary = [_device newDefaultLibrary];
 
-    id<MTLFunction> heatSimulator = [defaultLibrary newFunctionWithName:@":TODO"];
+    id<MTLFunction> qnSimulator = [defaultLibrary newFunctionWithName:@"ComputeQn"];
+    
+    id<MTLFunction> tn1Simulator = [defaultLibrary newFunctionWithName:@"ComputeTn1"];
 
-    _computePipeline = [_device newComputePipelineStateWithFunction:heatSimulator error:&error];
-    if (!_computePipeline)
-    {
-        NSLog(@"Failed to create compute pipeline state, error %@", error);
+    _computeQnPipeline = [_device newComputePipelineStateWithFunction:qnSimulator error:&error];
+    if (!_computeQnPipeline) {
+        NSLog(@"Failed to create Qn compute pipeline state, error %@", error);
+    }
+    
+    _computeTn1Pipeline = [_device newComputePipelineStateWithFunction:tn1Simulator error:&error];
+    if(!_computeTn1Pipeline) {
+        NSLog(@"Failed to create Tn1 compute pipeline state, error %@", error);
     }
     
 }
