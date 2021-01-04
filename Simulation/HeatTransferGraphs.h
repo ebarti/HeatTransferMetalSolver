@@ -22,9 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 API_AVAILABLE(macos(11.0))
 @interface EBGraph : MPSGraph{
     const EBSimulationConfig* _config;
+    MPSShape * _pShape;
+    MPSNDArrayDescriptor * _pDescriptor;
+    MPSGraphTensor * _pBoundaries[6];
 }
 -(instancetype) initWithConfig:(EBSimulationConfig *)config;
--(MPSGraphTensor *) boundaryConditionTensor:(EBMatrixDirection) direction;
 @end
 
 API_AVAILABLE(macos(11.0))
