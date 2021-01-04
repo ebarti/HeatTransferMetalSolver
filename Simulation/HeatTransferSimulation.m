@@ -59,12 +59,12 @@ static const NSUInteger CountUpdateBuffersStored = 3;
 }
 
 - (nonnull id<MTLBuffer>)computeQnWithCommandBuffer:(nonnull id<MTLCommandBuffer>)commandBuffer {
-    <#code#>;
+    return nil;
 }
 
 
 - (nonnull id<MTLBuffer>)computeTn1WithCommandBuffer:(nonnull id<MTLCommandBuffer>)commandBuffer {
-    ;
+    return nil;
 }
 
 - (void)createMetalObjectsAndMemory {

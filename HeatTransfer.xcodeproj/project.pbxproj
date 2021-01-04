@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		59ABC9E1259B8BF900EE9F4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59ABC9DF259B8BF900EE9F4C /* Main.storyboard */; };
 		59ABC9E4259B8BF900EE9F4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC9E3259B8BF900EE9F4C /* main.m */; };
 		59ABC9F0259B8D6E00EE9F4C /* HeatTransferView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ABC9EE259B8D6E00EE9F4C /* HeatTransferView.m */; };
+		59D1085E25A2482F005CB237 /* HeatTransferGraphs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59D1085D25A2482F005CB237 /* HeatTransferGraphs.mm */; };
+		59F95D8325A33CDE005929AC /* MetalPerformanceShadersGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F95D8225A33CDE005929AC /* MetalPerformanceShadersGraph.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,9 @@
 		59ABC9EF259B8D6E00EE9F4C /* HeatTransferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeatTransferView.h; sourceTree = "<group>"; };
 		59B19EBD259E2A8100CF590F /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		59B19EC2259E2B5600CF590F /* DebugConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugConfig.xcconfig; sourceTree = "<group>"; };
+		59D1085C25A2482F005CB237 /* HeatTransferGraphs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeatTransferGraphs.h; sourceTree = "<group>"; };
+		59D1085D25A2482F005CB237 /* HeatTransferGraphs.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HeatTransferGraphs.mm; sourceTree = "<group>"; };
+		59F95D8225A33CDE005929AC /* MetalPerformanceShadersGraph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalPerformanceShadersGraph.framework; path = System/Library/Frameworks/MetalPerformanceShadersGraph.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F95D8325A33CDE005929AC /* MetalPerformanceShadersGraph.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,8 @@
 				59507CF125A0E92400B50E6A /* HeatTransferSimulation.h */,
 				59507CF225A0E92400B50E6A /* HeatTransferSimulation.m */,
 				59507CF525A0F64500B50E6A /* HeatTransferKernels.metal */,
+				59D1085C25A2482F005CB237 /* HeatTransferGraphs.h */,
+				59D1085D25A2482F005CB237 /* HeatTransferGraphs.mm */,
 			);
 			path = Simulation;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 		59B19EBC259E2A8100CF590F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59F95D8225A33CDE005929AC /* MetalPerformanceShadersGraph.framework */,
 				59B19EBD259E2A8100CF590F /* Metal.framework */,
 			);
 			name = Frameworks;
@@ -163,7 +172,7 @@
 				};
 			};
 			buildConfigurationList = 59ABC9CF259B8BF800EE9F4C /* Build configuration list for PBXProject "HeatTransfer" */;
-			compatibilityVersion = "Xcode 11.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -203,6 +212,7 @@
 				59ABC9E4259B8BF900EE9F4C /* main.m in Sources */,
 				59ABC9D9259B8BF800EE9F4C /* AppDelegate.m in Sources */,
 				59507CF625A0F64500B50E6A /* HeatTransferKernels.metal in Sources */,
+				59D1085E25A2482F005CB237 /* HeatTransferGraphs.mm in Sources */,
 				59979296259CE172009F6FA6 /* HeatTransferRenderer.m in Sources */,
 				59ABC9F0259B8D6E00EE9F4C /* HeatTransferView.m in Sources */,
 			);
@@ -273,6 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -325,6 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
