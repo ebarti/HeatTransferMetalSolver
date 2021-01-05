@@ -10,11 +10,13 @@
 
 static const NSUInteger CountUpdateBuffersStored = 3;
 
-static vector_float3 getPosition(int x, int y, int z, const EBSimulationConfig* config) {
+static vector_float3 getPosition(int x, int y, int z) {
     vector_float3 v = {0.0, 0.0, 0.0};
-    v.x = ((float)x) /((float)config->numXElements);
-    v.y = ((float)y) /((float)config->numYElements);
-    v.z = ((float)z) /((float)config->numZElements);
+    
+    // Remap accordingly in shader
+    v.x = ((float)x);
+    v.y = ((float)y);
+    v.z = ((float)z);
     return v;
 }
 
@@ -23,8 +25,6 @@ static vector_float3 getPosition(int x, int y, int z, const EBSimulationConfig* 
     id<MTLCommandQueue> _commandQueue;
     id<MTLComputePipelineState> _computeQnPipeline;
     id<MTLComputePipelineState> _computeTn1Pipeline;
-    id<MTLBuffer> _updateBuffer[CountUpdateBuffersStored];
-
 
     NSUInteger _currentBufferIndex;
 
@@ -123,6 +123,9 @@ static vector_float3 getPosition(int x, int y, int z, const EBSimulationConfig* 
     params->numXElements = _config->numXElements;
     params->numYElements = _config->numYElements;
     params->numZElements = _config->numZElements;
+    params->dX = _config->xLength/((float)_config->numXElements);
+    params->dY = _config->yLength/((float)_config->numYElements);
+    params->dZ = _config->zLength/((float)_config->numZElements);
     params->fluidTemperature = _config->fluidTemperature;
     params->deltaTime = _config->deltaTime;
 
@@ -141,9 +144,9 @@ static vector_float3 getPosition(int x, int y, int z, const EBSimulationConfig* 
             for (int zz = 0; zz < _config->numZElements; zz++) {
                 // Flat[x + SIZE_X * (y + SIZE_Y * z)] = Original[x, y, z]
                 int idx = xx + _config->numXElements*(yy + _config->numYElements*zz);
-                temperatures[idx].xyz = getPosition(xx,yy,zz, _config);
+                temperatures[idx].xyz = getPosition(xx,yy,zz);
                 temperatures[idx].w = _config->initialTemperature;
-                heatFlows[idx].xyz = getPosition(xx,yy,zz, _config);
+                heatFlows[idx].xyz = getPosition(xx,yy,zz);
                 heatFlows[idx].w = 0.0;
             }
         }
