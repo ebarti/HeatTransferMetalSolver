@@ -10,18 +10,39 @@
 
 #include <simd/simd.h>
 
-typedef enum EBComputeBufferIndex
+typedef enum EBComputeQnBufferIndex
 {
-    EBComputeBufferIndexOldTemperature = 0,
-    EBComputeBufferIndexOldHeatFlow = 1,
-    EBComputeBufferIndexNewTemperature = 2,
-    EBComputeBufferIndexNewHeatFlow = 3,
-    EBComputeBufferIndexPhysicalParams = 4
-} EBComputeBufferIndex;
+    EBComputeQnBufferIndexTn = 0,
+    EBComputeQnBufferIndexQn = 1,
+    EBComputeQnBufferIndexParams = 2
+} EBComputeQnBufferIndex;
+
+
+typedef enum EBComputeTn1BufferIndex
+{
+    EBComputeTnBufferIndexTn = 0,
+    EBComputeTnBufferIndexHeatFlow = 1,
+    EBComputeTnBufferIndexTsup = 2,
+    EBComputeTnBufferIndexTn1 = 3,
+    EBComputeTnBufferIndexParams = 4
+} EBComputeTn1BufferIndex;
 
 typedef struct EBPhysicalParams
 {
-    float timestep;
+    float xLength;
+    float yLength;
+    float zLength;
+    float dX;
+    float dY;
+    float dZ;
+    float xArea;
+    float yArea;
+    float zArea;
+    uint32_t numXElements;
+    uint32_t numYElements;
+    uint32_t numZElements;
+    float fluidTemperature;
+    float deltaTime;
     // TODO: add parameters for a dynamic physical model instead of the current hard coded model within the kernel computation.
 } EBPhysicalParams;
 

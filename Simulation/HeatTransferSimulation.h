@@ -18,8 +18,8 @@ typedef struct EBSimulationConfig
     uint32_t numXElements;
     uint32_t numYElements;
     uint32_t numZElements;
-    float initialTemperature;
     float fluidTemperature;
+    float initialTemperature;
     float deltaTime;
     float maxTime;
 } EBSimulationConfig;
@@ -31,7 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithComputeDevice:(id<MTLDevice>)computeDevice
                                        config:(const EBSimulationConfig *)config;
 
-- (id<MTLBuffer>)simulateFrameWithCommandBuffer:(id<MTLCommandBuffer>)commandBuffer;
+- (id<MTLBuffer>)computeQnWithCommandBuffer:(id<MTLCommandBuffer>)commandBuffer;
+- (id<MTLBuffer>)computeTn1WithCommandBuffer:(id<MTLCommandBuffer>)commandBuffer;
 
 
 @end
