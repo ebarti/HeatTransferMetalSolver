@@ -41,6 +41,8 @@ typedef struct EBPhysicalParams
     uint32_t numXElements;
     uint32_t numYElements;
     uint32_t numZElements;
+    float beta;
+    float rho;
     float fluidTemperature;
     float deltaTime;
     // TODO: add parameters for a dynamic physical model instead of the current hard coded model within the kernel computation.
