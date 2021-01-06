@@ -112,7 +112,6 @@ kernel void ComputeTn1(device float4*              tn                 [[ buffer(
     uint32_t y = (uint32_t)tn[threadInGrid].y;
     uint32_t z = (uint32_t)tn[threadInGrid].z;
     float tside[6] = {0.f};
-    float newTemp = 0.f;
     if (x < params.numXElements-1) tside[north]=  tSup[x+1+params.numXElements*(y   + params.numZElements*z)].w;
     if (x > 0)                     tside[south]=  tSup[x-1+params.numXElements*(y   + params.numZElements*z)].w;
     if (y < params.numYElements-1) tside[east] =  tSup[x+params.numXElements*  (y+1 + params.numZElements*z)].w;
@@ -137,5 +136,5 @@ kernel void ComputeTn1(device float4*              tn                 [[ buffer(
     Ap *= params.beta;
     // Boundary condition Ap
     Ap += params.beta * alpha(temp_guess) * params.fluidTemperature * surfaceArea;
-    
+    tn1[threadInGrid] = (AiTi + Bp) / Ap;
 }
