@@ -13,7 +13,7 @@
 // Positions
 typedef enum EBRenderBufferIndex
 {
-    EBRenderBufferIndexPositions = 0,
+    EBRenderBufferIndexTemperatures = 0,
     EBRenderBufferIndexColors   = 1,
     EBRenderBufferIndexUniforms = 2,
 } EBRenderBufferIndex;

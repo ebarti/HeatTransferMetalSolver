@@ -2,18 +2,27 @@
 //  HeatTransferRenderer.h
 //  HeatTransfer
 //
-//  Created by Eloi on 12/30/20.
+//  Created by Eloi on 1/7/21.
 //
 
-#import <Metal/Metal.h>
-#import <QuartzCore/CAMetalLayer.h>
+@import MetalKit;
 
 @interface HeatTransferRenderer : NSObject
+- (nonnull instancetype)initWithMetalKitView:(nonnull MTKView *)mtkView;
 
-- (nonnull instancetype)initWithMetalDevice:(nonnull id<MTLDevice>)device;
+- (void)drawableSizeWillChange:(CGSize)size;
 
-- (void)renderToMetalLayer:(nonnull CAMetalLayer*)metalLayer;
+- (void)drawWithCommandBuffer:(nonnull id<MTLCommandBuffer>)commandBuffer
+              positionsBuffer:(nonnull id<MTLBuffer>)temperatureBuffer
+                 numXElements:(NSUInteger)numXElements
+                 numYElements:(NSUInteger)numYElements
+                 numZElements:(NSUInteger)numZElements
+                       inView:(nonnull MTKView *)view;
 
-- (void)drawableResize:(CGSize)drawableSize;
+
+- (void)setRenderScale:(float)renderScale withDrawableSize:(CGSize)size;
+
+@property (nonatomic, readonly, nonnull) id<MTLDevice> device;
+
+
 @end
-

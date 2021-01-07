@@ -6,14 +6,14 @@
 //
 
 #import "ViewController.h"
-#import "HeatTransferView.h"
 #import "HeatTransferRenderer.h"
-
+#import "HeatTransferSimulation.h"
 #import <QuartzCore/CAMetalLayer.h>
 
 
 @implementation ViewController {
     HeatTransferRenderer* _renderer;
+    
 }
 
 - (void)viewDidLoad {
@@ -21,25 +21,24 @@
     // Create device
     id<MTLDevice> device = MTLCreateSystemDefaultDevice();
 
-    // Set the view
-    HeatTransferView *view = (HeatTransferView *)self.view;
 
-    view.metalLayer.device = device;
-
-    // This is the key piece here....
-    view.delegate = self;
-
-    _renderer = [[HeatTransferRenderer alloc] initWithMetalDevice:device];
 }
 
 
-- (void)drawableResize:(CGSize)size {
-    [_renderer drawableResize:size];
+- (void)drawInMTKView:(nonnull MTKView *)view {
+    return;
 }
 
-- (void)renderToMetalLayer:(nonnull CAMetalLayer *)metalLayer {
-    [_renderer renderToMetalLayer:metalLayer];
+- (void)mtkView:(nonnull MTKView *)view drawableSizeWillChange:(CGSize)size {
+    return;
 }
 
+- (BOOL)commitEditingAndReturnError:(NSError *__autoreleasing  _Nullable * _Nullable)error {
+    return YES;
+}
+
+- (void)encodeWithCoder:(nonnull NSCoder *)coder {
+    return;
+}
 
 @end

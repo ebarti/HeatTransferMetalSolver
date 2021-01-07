@@ -14,17 +14,18 @@ typedef enum EBComputeQnBufferIndex
 {
     EBComputeQnBufferIndexTn = 0,
     EBComputeQnBufferIndexQn = 1,
-    EBComputeQnBufferIndexParams = 2
+    EBComputeQnBufferIndexTn1 = 2,
+    EBComputeQnBufferIndexParams = 3
 } EBComputeQnBufferIndex;
 
 
 typedef enum EBComputeTn1BufferIndex
 {
-    EBComputeTnBufferIndexTn = 0,
-    EBComputeTnBufferIndexHeatFlow = 1,
-    EBComputeTnBufferIndexTsup = 2,
-    EBComputeTnBufferIndexTn1 = 3,
-    EBComputeTnBufferIndexParams = 4
+    EBComputeTn1BufferIndexTn = 0,
+    EBComputeTn1BufferIndexQn = 1,
+    EBComputeTn1BufferIndexTguess = 2,
+    EBComputeTn1BufferIndexTn1 = 3,
+    EBComputeTn1BufferIndexParams = 4
 } EBComputeTn1BufferIndex;
 
 typedef struct EBPhysicalParams

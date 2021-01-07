@@ -5,10 +5,10 @@
 //  Created by Eloi on 12/29/20.
 //
 
-@import AppKit;
-#import "HeatTransferView.h"
+@import Cocoa;
+@import MetalKit;
 
-@interface ViewController : NSViewController <HeatTransferViewDelegate>
+@interface ViewController : NSViewController<MTKViewDelegate>
 
 
 @end

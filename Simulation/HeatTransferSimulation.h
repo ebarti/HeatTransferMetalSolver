@@ -32,7 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
                                        config:(const EBSimulationConfig *)config;
 
 - (id<MTLBuffer>)computeQnWithCommandBuffer:(id<MTLCommandBuffer>)commandBuffer;
-- (id<MTLBuffer>)computeTn1WithCommandBuffer:(id<MTLCommandBuffer>)commandBuffer;
+- (id<MTLBuffer>)computeTn1WithCommandBuffer:(id<MTLCommandBuffer>)commandBuffer
+                                   recompute:(BOOL)recompute;
 
 
 @end

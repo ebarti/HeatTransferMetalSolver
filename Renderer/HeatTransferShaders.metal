@@ -18,14 +18,14 @@ typedef struct
 } Vertex;
 
 vertex Vertex vertexShader(uint                    vertexID  [[ vertex_id ]],
-                               const device float4*    position  [[ buffer(EBRenderBufferIndexPositions) ]],
+                               const device float4*    temperature  [[ buffer(EBRenderBufferIndexTemperatures) ]],
                                const device uchar4*    color     [[ buffer(EBRenderBufferIndexColors)    ]],
                                constant EBUniforms & uniforms  [[ buffer(EBRenderBufferIndexUniforms)  ]])
 {
     Vertex out;
 
     // Calculate the position of the vertex in clip space and output for clipping and rasterization
-    out.position = uniforms.mvpMatrix * position[vertexID];
+    out.position = uniforms.mvpMatrix * temperature[vertexID];
 
     // Pass along the texture coordinate of the vertex for the fragment shader to use to sample from
     // the texture
