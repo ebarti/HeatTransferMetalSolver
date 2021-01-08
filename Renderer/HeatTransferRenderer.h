@@ -13,7 +13,7 @@
 - (void)drawableSizeWillChange:(CGSize)size;
 
 - (void)drawWithCommandBuffer:(nonnull id<MTLCommandBuffer>)commandBuffer
-              positionsBuffer:(nonnull id<MTLBuffer>)temperatureBuffer
+              tempBuffer:(nonnull id<MTLBuffer>)tempBuffer
                  numXElements:(NSUInteger)numXElements
                  numYElements:(NSUInteger)numYElements
                  numZElements:(NSUInteger)numZElements

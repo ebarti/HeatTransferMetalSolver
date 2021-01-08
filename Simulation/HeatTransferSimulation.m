@@ -169,7 +169,7 @@
 }
 
 
-- (nonnull id<MTLBuffer>)computeQnWithCommandBuffer:(nonnull id<MTLCommandBuffer>)commandBuffer {
+- (void)computeQnWithCommandBuffer:(nonnull id<MTLCommandBuffer>)commandBuffer {
     [commandBuffer pushDebugGroup:@"Compute Qn"];
     // Increment time at start of computation
     _simulationTime += _config->deltaTime;
@@ -195,7 +195,6 @@
     _tn1BufferIndex = _tGuessBufferIndex;
     _tGuessBufferIndex = tn1Idx;
     [commandBuffer popDebugGroup];
-    return _heatFlow;
 }
 
 

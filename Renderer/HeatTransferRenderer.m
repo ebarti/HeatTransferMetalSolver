@@ -153,7 +153,7 @@ static const NSUInteger AAPLGaussianMapSize = 64;
     uniforms->mvpMatrix = _projectionMatrix;
 }
 
-- (void)drawWithCommandBuffer:(nonnull id<MTLCommandBuffer>)commandBuffer positionsBuffer:(nonnull id<MTLBuffer>)temperatureBuffer numXElements:(NSUInteger)numXElements numYElements:(NSUInteger)numYElements numZElements:(NSUInteger)numZElements inView:(nonnull MTKView *)view {
+- (void)drawWithCommandBuffer:(nonnull id<MTLCommandBuffer>)commandBuffer tempBuffer:(nonnull id<MTLBuffer>)temperatureBuffer numXElements:(NSUInteger)numXElements numYElements:(NSUInteger)numYElements numZElements:(NSUInteger)numZElements inView:(nonnull MTKView *)view {
     // Wait to ensure only AAPLMaxRenderBuffersInFlight are getting processed by any stage in the Metal
     // pipeline (App, Metal, Drivers, GPU, etc)
     dispatch_semaphore_wait(_inFlightSemaphore, DISPATCH_TIME_FOREVER);
