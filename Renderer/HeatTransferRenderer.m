@@ -49,13 +49,13 @@ static const NSUInteger AAPLGaussianMapSize = 64;
 
         _inFlightSemaphore = dispatch_semaphore_create(MaxRenderBuffersInFlight);
         [self loadMetal:mtkView];
-        [self generateGaussianMap];
+        [self createTextures];
     }
 
     return self;
 }
 
--(void) generateGaussianMap
+-(void) createTextures
 {
     NSError *error;
 

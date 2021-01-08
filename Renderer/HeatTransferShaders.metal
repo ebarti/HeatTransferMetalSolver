@@ -17,11 +17,11 @@ typedef struct
     float4  color;
 } Vertex;
 
-vertex Vertex vertexShader(uint                    vertexID  [[ vertex_id ]],
-                               const device float4*    temperature  [[ buffer(EBRenderBufferIndexTemperatures) ]],
-                               const device uchar4*    color     [[ buffer(EBRenderBufferIndexColors)    ]],
-                               constant EBUniforms & uniforms  [[ buffer(EBRenderBufferIndexUniforms)  ]])
+vertex Vertex vertexShader(uint                     vertexID    [[ vertex_id                                ]],
+                           const device float*      temperature [[ buffer(EBRenderBufferIndexTemperatures)  ]],
+                           constant EBUniforms &    uniforms    [[ buffer(EBRenderBufferIndexUniforms)      ]])
 {
+    // Transform the coordinataes of the temperature array by index
     Vertex out;
 
     // Calculate the position of the vertex in clip space and output for clipping and rasterization

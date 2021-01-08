@@ -9,16 +9,6 @@
 #import "HeatTransferKernelTypes.h"
 
 
-static vector_float3 getPosition(int x, int y, int z) {
-    vector_float3 v = {0.0, 0.0, 0.0};
-    
-    // Remap accordingly in shader
-    v.x = ((float)x);
-    v.y = ((float)y);
-    v.z = ((float)z);
-    return v;
-}
-
 @implementation HeatTransferSimulation {
     id<MTLDevice> _device;
     id<MTLCommandQueue> _commandQueue;
