@@ -22,8 +22,6 @@ static const NSUInteger AAPLGaussianMapSize = 64;
     
     id<MTLTexture> _texture;
 
-    id<MTLBuffer> _colors;
-
     // Metal objects
     id<MTLBuffer> _positionsBuffer;
     id<MTLBuffer> _dynamicUniformBuffers[MaxRenderBuffersInFlight];
@@ -198,9 +196,6 @@ static const NSUInteger AAPLGaussianMapSize = 64;
                                         offset:0 atIndex:EBRenderBufferIndexTemperatures];
             }
 
-            [renderEncoder setVertexBuffer:_colors
-                                    offset:0 atIndex:EBRenderBufferIndexColors];
-
             [renderEncoder setVertexBuffer:_dynamicUniformBuffers[_currentBufferIndex]
                                     offset:0 atIndex:EBRenderBufferIndexUniforms];
 
@@ -240,6 +235,8 @@ static const NSUInteger AAPLGaussianMapSize = 64;
     id<MTLFunction> fragmentFunction = [defaultLibrary newFunctionWithName:@"fragmentShader"];
 
     mtkView.depthStencilPixelFormat = MTLPixelFormatDepth32Float_Stencil8;
+    mtkView.depthStencilPixelFormat = MTLPixelFormatDepth32Float;
+
     mtkView.colorPixelFormat = MTLPixelFormatBGRA8Unorm;
     mtkView.sampleCount = 1;
 
@@ -259,7 +256,7 @@ static const NSUInteger AAPLGaussianMapSize = 64;
         pipelineDescriptor.colorAttachments[0].sourceAlphaBlendFactor  = MTLBlendFactorSourceAlpha;
         pipelineDescriptor.colorAttachments[0].destinationRGBBlendFactor = MTLBlendFactorOne;
         pipelineDescriptor.colorAttachments[0].destinationAlphaBlendFactor = MTLBlendFactorOne;
-
+        
         _renderPipeline = [_device newRenderPipelineStateWithDescriptor:pipelineDescriptor error:&error];
         if (!_renderPipeline)
         {

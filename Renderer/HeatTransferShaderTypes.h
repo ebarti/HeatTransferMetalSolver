@@ -14,7 +14,7 @@
 typedef enum EBRenderBufferIndex
 {
     EBRenderBufferIndexTemperatures = 0,
-    EBRenderBufferIndexColors   = 1,
+    EBRenderBufferIndexParams   = 1,
     EBRenderBufferIndexUniforms = 2,
 } EBRenderBufferIndex;
 
@@ -30,5 +30,14 @@ typedef struct
     matrix_float4x4 mvpMatrix; // modelViewProjectionMatrix
 
 } EBUniforms;
+
+typedef struct EBShaderParams
+{
+    float initialTemperature;
+    float fluidTemperature;
+    uint32_t numXElements;
+    uint32_t numYElements;
+    uint32_t numZElements;
+} EBShaderParams;
 
 #endif /* HeatTransferShaderTypes_h */
